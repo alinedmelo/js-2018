@@ -10,3 +10,9 @@ b     = 200     // não pode ser declarada novamente
 /* c = 300  constante não pode receber nova atribuição */
 
 console.log(a, b, c)
+
+let soma = (a, b, c) => {
+    return a + b + c
+}
+
+console.log('Soma: ' + soma(a, b, c))
