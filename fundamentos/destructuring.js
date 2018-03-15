@@ -34,3 +34,19 @@ const obj = {min: 20, max: 50} // definindo o objeto a ser passado na função
 
 console.log(rand(obj))
 console.log (rand({min: 10}))  // definindo somente o valor min, o max vem como padrão da função
+
+// Usando arrays
+
+function rand2([min = 0, max = 100]) {
+    //se min for menor que o max, reorganiza as posições no array
+    if(min > max) {
+        [min, max] = [max, min]
+    }
+    const valor2 = Math.random() * (max - min) + min
+    return Math.floor(valor2)
+}
+
+console.log('Rand2 >> ', rand2([50, 20])) //vai reaorganizar as posições deixando 20 / 50 = min / max
+console.log('Rand2 >> ', rand2([20]))
+console.log('Rand2 >> ', rand2([, 10]))
+console.log('Rand2 >> ', rand2([])) // traz o valor padrão
