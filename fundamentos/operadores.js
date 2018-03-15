@@ -52,3 +52,10 @@ console.log('Caso 1: ', compras(true, true))
 console.log('Caso 2: ', compras(true, false))
 console.log('Caso 3: ', compras(false, true))
 console.log('Caso 4: ', compras(false, false))
+
+// operador ternário 
+
+const resultado = nota => nota >= 7 ? 'Aprovado' : 'Reprovado'
+
+console.log('Resultado 1:', resultado(7.5))
+console.log('Resultado 2:', resultado(4.5))
